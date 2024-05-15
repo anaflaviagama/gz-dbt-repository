@@ -27,5 +27,5 @@ select
     orders_id
     , shipping_fee
     , logcost
-    , ship_cost
+    , CAST(ship_cost as FLOAT64) as ship_cost
 from {{ source('raw', 'ship') }}
